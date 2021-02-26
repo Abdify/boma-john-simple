@@ -1,0 +1,21 @@
+.product{
+    display: flex;
+    border-bottom: 2px solid teal;
+    margin: 10px;
+    padding: 10px;
+}
+.product-name{
+    color: teal;
+}
+.order-btn{
+    background-color: #f4cc67;
+    border: 1px solid;
+    border-color: #C59F43 #AA8326 #957321;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.1));
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset;
+    padding: 3px 30px;
+    cursor: pointer;
+}
+.order-btn:hover{
+    background-color: goldenrod;
+}

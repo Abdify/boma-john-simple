@@ -1,0 +1,24 @@
+.cart{
+    border-bottom: 2px solid black;
+}
+.cart h3{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.cart > p{
+    padding: 2px;
+    margin: 4px;
+    font-size: 15px;
+}
+.cart > p:nth-child(2n+1){
+    background-color: lightgray;
+}
+.cart > p:nth-child(2n){
+    background-color: gray;
+    color: whitesmoke;
+}
+.highlighted{
+    font-size: 20px;
+    color: crimson;
+}
