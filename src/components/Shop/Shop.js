@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import fakeData from "../../fakeData";
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
-import './Shop.css';
+import "./Shop.css";
 
 const Shop = () => {
     const first10 = fakeData.slice(0, 10);
@@ -33,17 +34,22 @@ const Shop = () => {
     
     return (
         <div className="shop-container">
+        {console.log("dfdf")}
             <div className="product-container">
                 {products.map((product) => (
-                    <Product 
+                    <Product
                         showAddToCartBtn={true}
-                        handleAddProduct={() => handleAddProduct(product)} 
-                        product={product}>
-                    </Product>
+                        handleAddProduct={() => handleAddProduct(product)}
+                        product={product}
+                    ></Product>
                 ))}
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link to="/review">
+                        <button className="order-btn">Review Order</button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );

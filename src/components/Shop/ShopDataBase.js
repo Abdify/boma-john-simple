@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import fakeData from "../../fakeData";
 import { addToDatabaseCart, getDatabaseCart } from "../../utilities/databaseManager";
 import Cart from "../Cart/Cart";
@@ -44,6 +45,7 @@ const ShopDataBase = () => {
             <div className="product-container">
                 {products.map((product) => (
                     <Product
+                        key={product.key}
                         showAddToCartBtn={true}
                         handleAddProduct={() => handleAddProduct(product)}
                         product={product}
@@ -51,7 +53,11 @@ const ShopDataBase = () => {
                 ))}
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link to="/review">
+                        <button className="order-btn">Review Order</button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );
