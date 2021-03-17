@@ -1,0 +1,13 @@
+.shipment-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    margin: 1rem auto;
+}
+.shipment-form form * {
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+}

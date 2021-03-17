@@ -1,0 +1,7 @@
+.log-in-box{
+    text-align: center;
+}
+.log-in-box > form > * {
+    margin: 10px;
+    padding: 8px 10px;
+}
